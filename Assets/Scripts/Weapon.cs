@@ -11,6 +11,8 @@ public class Weapon : MonoBehaviour
 	private GameObject bulletPrefab;
 	[SerializeField]
 	private Transform firePivot;
+	[SerializeField]
+	private bool isEnemy = false;
 	[Space]
 	[Header("Parameters")]
 	[SerializeField]
@@ -42,6 +44,9 @@ public class Weapon : MonoBehaviour
 
 	void Update()
 	{
+		if (isEnemy)
+			return;
+
 		// Mouse Look
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
