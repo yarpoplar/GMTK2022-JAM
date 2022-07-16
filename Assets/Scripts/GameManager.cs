@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchWeapon(int index)
     {
-        int ammo = Random.Range(3, 10);
+        int ammo = Random.Range(5, 10);
 
         playerWeapons[currentWeapon].gameObject.SetActive(false);
         playerWeapons[index].gameObject.SetActive(true);

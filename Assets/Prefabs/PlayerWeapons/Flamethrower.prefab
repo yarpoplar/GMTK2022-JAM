@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3978188009404570150
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1223244469, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223244469, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0432
+      objectReference: {fileID: 0}
+    - target: {fileID: 393311755970444709, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 393311755970444709, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 393311755970444709, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609163, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: ammo
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609163, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: spread
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609163, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: baseAmmo
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609163, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: fireSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609163, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: isAutomatic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609163, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1823397484542466890, guid: ca2acd40fdd803642a6e65876d807cff, type: 3}
+    - target: {fileID: 8365085876888609163, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: bulletsPerShot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609204, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609205, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_Name
+      value: Flamethrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609205, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407929394066381391, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f789ee26646f0334ebf7758f9960211d, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38de6dc375e82294a8e446c5ebe01b26, type: 3}
