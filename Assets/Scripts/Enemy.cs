@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour, IDamageable
 {
     public float Health = 5;
     public float Damage = 1;
-    public float KnockbackForce = 1;
+    public float KnockbackForce = 2;
 
     public GameObject spriteRoot;
     public GameObject sprite;
@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour, IDamageable
     public void ApplyDamage(float damage, Vector3 knockback)
     {
         knockback.y = 0;
-        transform.position += knockback;
+        StartCoroutine(HitRoutine(knockback));
 
         Health -= damage;
         spriteMat.SetFloat("_Hit", 1);
@@ -66,6 +66,21 @@ public class Enemy : MonoBehaviour, IDamageable
         hitTween = spriteMat.DOFloat(0, "_Hit", 0.15f);
     }
 
+    private IEnumerator HitRoutine(Vector3 knockback)
+    {
+        navMeshAgent.enabled = false;
+        navMeshAgent.velocity = Vector3.zero;
+        float timeLeft = 0f;
+        while (timeLeft <= 0.2f)
+        {
+            timeLeft += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+            transform.position += knockback * Time.fixedDeltaTime * (1 - timeLeft / 0.2f);
+            //rb.AddForce(knockback * Time.fixedDeltaTime * (1 - timeLeft / 0.2f), ForceMode.VelocityChange);
+        }
+        navMeshAgent.enabled = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.transform.root.gameObject.name);
@@ -75,7 +90,6 @@ public class Enemy : MonoBehaviour, IDamageable
             if (target.TryGetComponent(out IDamageable enemy))
                 enemy.ApplyDamage(Damage, (target.transform.position - transform.position).normalized * KnockbackForce);
 
-            Debug.Log("HitPlayer");
         }
     }
 }

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
     [Header("Parameters")]
+    [SerializeField]
+    public float Health = 100;
     [SerializeField]
     private float moveSpeed = 15f;
     [SerializeField]
@@ -17,9 +19,13 @@ public class Player : MonoBehaviour
     private Rigidbody rb = null;
     [SerializeField]
     private GameObject GFX;
+    [SerializeField]
+    private GameObject Sprite;
 
     private Vector3 moveInput;
     private Vector3 moveVelocity;
+    private Material spriteMat;
+    private Tween hitTween;
 
     private bool isDashing = false;
     private bool canDash = true;
@@ -27,6 +33,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        spriteMat = Sprite.GetComponent<SpriteRenderer>().material;
     }
 
     void Update()
@@ -81,5 +88,31 @@ public class Player : MonoBehaviour
 	private void FixedUpdate()
 	{
         rb.velocity = moveVelocity;
+    }
+
+    public void ApplyDamage(float damage, Vector3 knockback)
+    {
+        Debug.Log("Player takes damage");
+        knockback.y = 0;
+        StartCoroutine(HitRoutine(knockback * 2000));
+
+        Health -= damage;
+    }
+
+    private IEnumerator HitRoutine(Vector3 knockback)
+    {
+        canDash = false;
+        float timeLeft = 0f;
+        float knockbackTime = 0.2f;
+        spriteMat.SetFloat("_Hit", 1);
+        while (timeLeft <= knockbackTime)
+        {
+            timeLeft += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+            rb.AddForce(knockback * Time.fixedDeltaTime * (1 - timeLeft/ knockbackTime), ForceMode.VelocityChange);
+            spriteMat.SetFloat("_Hit", (1 - timeLeft / knockbackTime));
+            Sprite.transform.localScale = new Vector3(Sprite.transform.localScale.x,  Mathf.Lerp(10f, 8f, (1 - timeLeft / knockbackTime)), Sprite.transform.localScale.z);
+        }
+        canDash = true;
     }
 }

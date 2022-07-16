@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private float Damage = 1;
     [SerializeField]
+    private float Knockback = 2f;
+    [SerializeField]
     private float Livetime = 4f;
     [Space]
     [SerializeField]
@@ -23,7 +25,7 @@ public class Bullet : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
         if (other.TryGetComponent(out IDamageable enemy))
-            enemy.ApplyDamage(Damage, (other.transform.position - GameManager.Instance.Player.transform.position).normalized * 2);
+            enemy.ApplyDamage(Damage, (other.transform.position - GameManager.Instance.Player.transform.position).normalized * Knockback);
 
         Destroy(gameObject);	
 	}
