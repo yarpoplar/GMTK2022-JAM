@@ -44,7 +44,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1382968685320762444, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.085
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 1382968685320762444, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -52,7 +52,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1382968685320762444, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.647
+      value: -0.65
       objectReference: {fileID: 0}
     - target: {fileID: 1382968685320762444, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -84,16 +84,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1382968685320762445, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
       propertyPath: m_Name
-      value: FishingRod
+      value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382968685320762445, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382968685320762483, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
+      propertyPath: ammo
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1382968685320762483, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
       propertyPath: spread
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1382968685320762483, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
       propertyPath: firePivot
       value: 
       objectReference: {fileID: 1223244469}
+    - target: {fileID: 1382968685320762483, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
+      propertyPath: isAutomatic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382968685320762483, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
+      propertyPath: bulletsPerShot
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1407793545598275511, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
       propertyPath: m_FlipX
       value: 1

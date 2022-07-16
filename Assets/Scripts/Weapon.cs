@@ -22,9 +22,16 @@ public class Weapon : MonoBehaviour
 	[SerializeField]
 	private float spread;
 	[SerializeField]
+	private Vector3 additionalForce = new Vector3(0f,0f,0f);
+	[SerializeField]
+	private float shake = 1f;
+	[SerializeField]
 	private bool isAutomatic = false;
+	[SerializeField]
+	private Vector3 recoilVector = new Vector3(1f, 0f, 0.2f);
 
 	private float cooldown = 0f;
+	public int baseAmmo = 5;
 	public int ammo = 5;
 
 	private void OnDisable()
@@ -39,7 +46,7 @@ public class Weapon : MonoBehaviour
 
 	public void SetAmmo(int ammoAmount)
 	{
-		ammo = ammoAmount;
+		ammo = (int)Mathf.Round((ammoAmount * .1f) * baseAmmo);
 	}
 
 	void Update()
@@ -79,14 +86,23 @@ public class Weapon : MonoBehaviour
 	{
 		for (int i = 0; i < bulletsPerShot; i++)
 		{
-			Instantiate(bulletPrefab, firePivot.position, firePivot.rotation * Quaternion.Euler(0f, Random.Range(-spread, spread), 0f));
+			var bullet = Instantiate(bulletPrefab, firePivot.position, firePivot.rotation * Quaternion.Euler(Random.Range(-spread, spread), 0f, 0f));
+			if (additionalForce != Vector3.zero)
+				bullet.GetComponent<Rigidbody>().AddForce(additionalForce, ForceMode.Impulse);
 		}
 
-		Camera.main.GetComponent<CinemachineImpulseSource>().GenerateImpulse();
+		WeaponFeedback();
 
 		ammo--;
 		cooldown = 0f;
-
 		GameManager.Instance.ammoCounter.text = ammo.ToString();
+	}
+
+	public void WeaponFeedback()
+	{
+		// Shake
+		Camera.main.GetComponent<CinemachineImpulseSource>().GenerateImpulse(shake);
+		// Recoil
+		transform.DOPunchPosition(recoilVector, cooldown / 2);
 	}
 }
