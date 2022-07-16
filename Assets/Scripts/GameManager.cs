@@ -21,8 +21,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text ammoCounter;
 
     private int currentWeapon = 0;
-    // TEMP FOR TESTING
-    private float diceTime = 0f;
+    private float diceTime = 15f;
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -54,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     private void ThrowDice(int goodDices, int badDices, int chaoticDices)
 	{
-        Instantiate(weaponDicePrefab, diceSpawn.position, Quaternion.Euler(new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360))));
+        Instantiate(weaponDicePrefab, diceSpawn.position, Quaternion.Euler(new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)))).SetActive(true);
     }
 
     public void SwitchWeapon(int index)
