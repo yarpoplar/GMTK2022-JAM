@@ -2663,6 +2663,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658003023}
   m_Mesh: {fileID: -462981019419857548, guid: 7e0dc0a424913ff4bbf6f42bbdd9b744, type: 3}
+--- !u!198 &1662872610 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6431574441278936313, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1699347494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2734,6 +2739,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7190560884961362872, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: muzzleVFX
+      value: 
+      objectReference: {fileID: 1662872610}
     - target: {fileID: 7415317423113245155, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
       propertyPath: m_Layer
       value: 6
