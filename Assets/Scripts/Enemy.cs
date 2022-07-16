@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void LateUpdate()
     {
-        spriteRoot.transform.forward = Camera.main.transform.forward;
+        //spriteRoot.transform.forward = Camera.main.transform.forward;
     }
 
     public void ApplyDamage(float damage)

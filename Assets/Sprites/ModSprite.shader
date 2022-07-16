@@ -1,4 +1,4 @@
-Shader "Unlit/ModSprite"
+Shader "Unlit/ModSprite1"
 {
 	Properties
 	{
@@ -54,7 +54,24 @@ Shader "Unlit/ModSprite"
 				v2f vert(appdata_t IN)
 				{
 					v2f OUT;
-					OUT.vertex = UnityObjectToClipPos(IN.vertex);
+
+					float4 world_origin = mul(UNITY_MATRIX_M, float4(0,0,0,1));
+					float4 view_origin = float4(UnityObjectToViewPos(float3(0,0,0)), 1);
+
+					float4 world_pos = mul(UNITY_MATRIX_M, IN.vertex);
+					float4 flipped_world_pos = float4(-1, 1, -1, 1) * (world_pos - world_origin) + world_origin;
+
+					//float4 view_pos = mul(UNITY_MATRIX_V, world_pos);
+					float4 view_pos = flipped_world_pos - world_origin + view_origin;
+
+
+					float4 clip_pos = mul(UNITY_MATRIX_P, view_pos);
+
+					//OUT.vertex = UnityObjectToClipPos(IN.vertex);
+					//OUT.vertex = mul(UNITY_MATRIX_MVP, IN.vertex);
+					OUT.vertex = clip_pos;
+
+
 					OUT.texcoord = IN.texcoord;
 					OUT.color = IN.color * _Color;
 					#ifdef PIXELSNAP_ON
@@ -66,17 +83,11 @@ Shader "Unlit/ModSprite"
 
 				sampler2D _MainTex;
 				sampler2D _AlphaTex;
-				float _AlphaSplitEnabled;
 
 				fixed4 SampleSpriteTexture(float2 uv)
 				{
 					fixed4 color = lerp(tex2D(_MainTex, uv), _HitColor, _Hit);
 					color.a = tex2D(_MainTex, uv).a;
-
-	#if UNITY_TEXTURE_ALPHASPLIT_ALLOWED
-					if (_AlphaSplitEnabled)
-						color.a = tex2D(_AlphaTex, uv).a;
-	#endif //UNITY_TEXTURE_ALPHASPLIT_ALLOWED
 
 					return color;
 				}
