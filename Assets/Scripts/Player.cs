@@ -38,5 +38,5 @@ public class Player : MonoBehaviour
 	private void FixedUpdate()
 	{
         rb.velocity = moveVelocity;
-	}
+    }
 }
