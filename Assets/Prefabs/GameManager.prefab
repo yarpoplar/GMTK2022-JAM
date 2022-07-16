@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  diceThrowCooldown: 30
+  diceSpawn: {fileID: 0}
+  weaponDicePrefab: {fileID: 0}
   playerWeapons:
   - {fileID: 0}
   ammoCounter: {fileID: 0}
