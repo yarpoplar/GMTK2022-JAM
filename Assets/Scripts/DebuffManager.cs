@@ -48,6 +48,7 @@ public class DebuffManager : MonoBehaviour
 	public void MakePlayerSlower()
 	{
 		GameManager.Instance.Player.GetComponent<Player>().moveSpeed *= .75f;
+		currentDebuff = Debuff.SlowerPlayer;
 	}
 
 	public void MakeWeaponsSlower()
@@ -56,10 +57,12 @@ public class DebuffManager : MonoBehaviour
 		{
 			weapon.fireSpeed *= 2;
 		}
+		currentDebuff = Debuff.SlowerWeapons;
 	}
 
 	public void MakeCameraCloser()
 	{
 		Camera.main.gameObject.transform.parent.GetComponentInChildren<CinemachineVirtualCamera>().m_Lens.FieldOfView = 40;
+		currentDebuff = Debuff.CloserCamera;
 	}
 }
