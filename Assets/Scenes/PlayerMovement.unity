@@ -481,6 +481,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &949622516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 929555818001350352, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 929555817515427926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1070151335
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +838,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 891224969776091954, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 61a5ec9000d7c474f92f118521a81766, type: 3}
     - target: {fileID: 929555817227865752, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -877,9 +886,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 929555817227865754, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: GFX
+      value: 
+      objectReference: {fileID: 949622516}
+    - target: {fileID: 929555817227865754, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: dashTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 929555817227865754, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: dashVelocity
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 929555817227865757, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251318615899534492, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251318615899534492, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251318615899534492, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -366394539, guid: 371c22d9511b75943ae76617360e3a14, type: 3}
+    - target: {fileID: 7251318615899534492, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251318615899534492, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251318615899534492, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
