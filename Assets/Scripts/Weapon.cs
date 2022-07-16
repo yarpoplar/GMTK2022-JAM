@@ -15,11 +15,25 @@ public class Weapon : MonoBehaviour
 	private bool isAutomatic = false;
 	[SerializeField]
 	private GameObject bulletPrefab;
+	[SerializeField]
+	private Transform firePivot;
 
 	private float cooldown = 0f;
 
 	void Update()
 	{
+		// Mouse Look
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+		float rayLength = 100f;
+
+		if (groundPlane.Raycast(ray, out rayLength))
+		{
+			Vector3 lookPos = ray.GetPoint(rayLength);
+			transform.LookAt(new Vector3(lookPos.x, transform.position.y, lookPos.z));
+		}
+
+
 		if (cooldown < fireSpeed)
 		{
 			cooldown += Time.deltaTime;
@@ -40,7 +54,7 @@ public class Weapon : MonoBehaviour
 	{
 		for (int i = 0; i < bulletsPerShot; i++)
 		{
-			Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(0f, Random.Range(-spread, spread), 0f));
+			Instantiate(bulletPrefab, firePivot.position, transform.rotation * Quaternion.Euler(0f, Random.Range(-spread, spread), 0f));
 		}
 
 		cooldown = 0f;

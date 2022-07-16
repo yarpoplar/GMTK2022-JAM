@@ -21,16 +21,6 @@ public class Player : MonoBehaviour
         // Movement and look
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * moveSpeed;
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-        float rayLength = 100f;
-
-        if (groundPlane.Raycast(ray, out rayLength))
-		{
-            Vector3 lookPos = ray.GetPoint(rayLength);
-            transform.LookAt(new Vector3(lookPos.x, transform.position.y, lookPos.z));
-		}
     }
 
 	private void FixedUpdate()
