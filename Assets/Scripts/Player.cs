@@ -10,24 +10,26 @@ public class Player : MonoBehaviour, IDamageable
     private GameObject GFX;
     [SerializeField]
     private GameObject Sprite;
+    private SpriteRenderer spriteRenderer;
     [Space]
     [Header("Parameters")]
     [SerializeField]
     public float Health = 100;
     [SerializeField]
-    public float moveSpeed = 1000f;
+    public float moveSpeed = 30f;
     [SerializeField]
     private float dashCooldown = 1f;
     [SerializeField]
-    private float dashTime = .2f;
+    private float dashTime = .5f;
     [SerializeField]
-    private float dashVelocity = 1200f;
+    private float dashVelocity = 1000f;
     private Rigidbody rb = null;
 
     private Vector3 moveInput;
     private Vector3 moveVelocity;
     private Material spriteMat;
     private Tween hitTween;
+    private Animator animator;
 
     private bool isDashing = false;
     private bool canDash = true;
@@ -35,7 +37,9 @@ public class Player : MonoBehaviour, IDamageable
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        spriteMat = Sprite.GetComponent<SpriteRenderer>().material;
+        spriteRenderer = Sprite.GetComponent<SpriteRenderer>();
+        spriteMat = spriteRenderer.material;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -46,11 +50,11 @@ public class Player : MonoBehaviour, IDamageable
 
         // Movement
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
-		rb.AddForce(moveInput * moveSpeed * Time.deltaTime, ForceMode.VelocityChange);
-
+		//rb.AddForce(moveInput * moveSpeed * Time.deltaTime, ForceMode.VelocityChange);
+        moveVelocity = moveInput * moveSpeed;
         if (Input.GetKeyDown(KeyCode.Space) && moveInput != Vector3.zero && canDash)
             StartCoroutine(DashRoutine(moveInput));
-	}
+    }
 
     private IEnumerator DashRoutine(Vector3 direction)
 	{
@@ -58,25 +62,27 @@ public class Player : MonoBehaviour, IDamageable
         canDash = false;
         float timeLeft = 0f;
 
-        GFX.transform.DOScale(new Vector3(.8f, .8f, .8f), dashTime / 2);
-        GFX.transform.DOLocalRotate(new Vector3(0, 0, 180), dashTime / 2);
+        float dirModifier = Vector3.Dot(Vector3.right, direction) >= 0 ? 1 : -1;
 
-        while (timeLeft <= (dashTime / 2))
+        GFX.transform.DOScale(new Vector3(.8f, .8f, .8f), dashTime / 2);
+        GFX.transform.DOLocalRotate(new Vector3(0, 0, 360 * dirModifier), dashTime, RotateMode.LocalAxisAdd);
+
+        while (timeLeft <= dashTime * 0.75f)
 		{
             timeLeft += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
-            rb.AddForce(direction * dashVelocity * Time.fixedDeltaTime, ForceMode.VelocityChange);
+            rb.AddForce(direction * dashVelocity * (1 - timeLeft / dashTime * 0.75f) * Time.fixedDeltaTime, ForceMode.VelocityChange);
         }
 
         GFX.transform.DOScale(new Vector3(1, 1, 1), dashTime / 2);
-        GFX.transform.DOLocalRotate(new Vector3(0, 0, 360), dashTime / 2);
+        //GFX.transform.DOLocalRotate(new Vector3(0, 0, 360), dashTime / 2);
 
-        while (timeLeft <= (dashTime / 2))
-        {
-            timeLeft += Time.fixedDeltaTime;
-            yield return new WaitForFixedUpdate();
-            rb.AddForce(direction * dashVelocity * Time.fixedDeltaTime, ForceMode.VelocityChange);
-        }
+        //while (timeLeft <= (dashTime / 2))
+        //{
+        //    timeLeft += Time.fixedDeltaTime;
+        //    yield return new WaitForFixedUpdate();
+        //    rb.AddForce(direction * dashVelocity * Time.fixedDeltaTime, ForceMode.VelocityChange);
+        //}
 
 
         isDashing = false;
@@ -90,6 +96,10 @@ public class Player : MonoBehaviour, IDamageable
 	private void FixedUpdate()
 	{
         rb.velocity = moveVelocity;
+        animator.SetFloat("Speed", rb.velocity.magnitude);
+
+        if (moveInput.magnitude >= 0.1)
+            spriteRenderer.flipX = Vector3.Dot(Vector3.right, moveInput) < 0;
     }
 
     public void ApplyDamage(float damage, Vector3 knockback)
