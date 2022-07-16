@@ -9,7 +9,9 @@ public class Weapon : MonoBehaviour
 	[Header("Setup")]
 	[SerializeField]
 	private GameObject bulletPrefab;
-	[SerializeField]
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
+    [SerializeField]
 	private Transform firePivot;
 	[SerializeField]
 	private bool isEnemy = false;
@@ -27,14 +29,19 @@ public class Weapon : MonoBehaviour
 	private float shake = 1f;
 	[SerializeField]
 	private bool isAutomatic = false;
+<<<<<<< Updated upstream
 	[SerializeField]
 	private Vector3 recoilVector = new Vector3(1f, 0f, 0.2f);
+=======
+	
+>>>>>>> Stashed changes
 
 	private float cooldown = 0f;
 	public int baseAmmo = 5;
 	public int ammo = 5;
 
-	private void OnDisable()
+
+    private void OnDisable()
 	{
 		transform.localScale = new Vector3(.5f, .5f, .5f);
 	}
@@ -51,8 +58,12 @@ public class Weapon : MonoBehaviour
 
 	void Update()
 	{
+		if (spriteRenderer)
+			spriteRenderer.flipY = Vector3.Dot(Vector3.right, transform.forward) < 0;
+
 		if (isEnemy)
-			return;
+            return;
+			
 
 		// Mouse Look
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
