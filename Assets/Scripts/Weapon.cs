@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
 	[Space]
 	[Header("Parameters")]
 	[SerializeField]
-	private float fireSpeed;
+	public float fireSpeed;
 	[SerializeField]
 	private float bulletsPerShot;
 	[SerializeField]

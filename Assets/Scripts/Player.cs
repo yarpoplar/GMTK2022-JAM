@@ -15,7 +15,7 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField]
     public float Health = 100;
     [SerializeField]
-    private float moveSpeed = 15f;
+    public float moveSpeed = 1000f;
     [SerializeField]
     private float dashCooldown = 1f;
     [SerializeField]

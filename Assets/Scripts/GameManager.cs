@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Transform diceSpawn;
     [SerializeField]
-    private GameObject weaponDicePrefab;
+    private List<GameObject> dices;
 
     [Header("Weapon Manager")]
     [SerializeField]
@@ -53,7 +53,8 @@ public class GameManager : MonoBehaviour
 
     private void ThrowDice(int goodDices, int badDices, int chaoticDices)
 	{
-        Instantiate(weaponDicePrefab, diceSpawn.position, Quaternion.Euler(new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)))).SetActive(true);
+        foreach(GameObject dice in dices)
+            Instantiate(dice, diceSpawn.position, Quaternion.Euler(new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)))).SetActive(true);
     }
 
     public void SwitchWeapon(int index)
