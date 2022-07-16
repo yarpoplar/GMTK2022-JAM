@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
 		if (groundPlane.Raycast(ray, out rayLength))
 		{
 			Vector3 lookPos = ray.GetPoint(rayLength);
-			transform.LookAt(new Vector3(lookPos.x, transform.position.y, lookPos.z));
+			firePivot.LookAt(new Vector3(lookPos.x, transform.position.y, lookPos.z));
 		}
 
 
@@ -54,7 +54,7 @@ public class Weapon : MonoBehaviour
 	{
 		for (int i = 0; i < bulletsPerShot; i++)
 		{
-			Instantiate(bulletPrefab, firePivot.position, transform.rotation * Quaternion.Euler(0f, Random.Range(-spread, spread), 0f));
+			Instantiate(bulletPrefab, firePivot.position, firePivot.rotation * Quaternion.Euler(0f, Random.Range(-spread, spread), 0f));
 		}
 
 		cooldown = 0f;
