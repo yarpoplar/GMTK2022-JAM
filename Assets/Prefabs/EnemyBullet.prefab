@@ -149,6 +149,10 @@ MonoBehaviour:
   Knockback: 2
   Livetime: 4
   rb: {fileID: 2322723830297603291}
+  VFX: {fileID: 0}
+  isExplosive: 0
+  explosiveRadius: 1
+  destroyDelay: 0
 --- !u!135 &1823397484542466893
 SphereCollider:
   m_ObjectHideFlags: 0
