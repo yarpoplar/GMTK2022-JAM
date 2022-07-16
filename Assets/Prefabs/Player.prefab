@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 929555817227865752}
   - component: {fileID: 929555817227865755}
   - component: {fileID: 929555817227865754}
+  - component: {fileID: 1051998530}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -147,10 +148,30 @@ MonoBehaviour:
   GFX: {fileID: 929555818001350352}
   Sprite: {fileID: 4854437278096301505}
   Health: 100
-  moveSpeed: 1000
+  moveSpeed: 30
   dashCooldown: 0.5
-  dashTime: 0.2
-  dashVelocity: 4000
+  dashTime: 0.4
+  dashVelocity: 1700
+--- !u!95 &1051998530
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929555817227865757}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 48e2c16e30547b34db6eca75d557597e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &929555817251534427
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +267,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0968208, y: 1}
+    m_SensorSize: {x: 2.150838, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
