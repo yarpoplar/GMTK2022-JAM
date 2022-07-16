@@ -10,6 +10,7 @@ public class Player : MonoBehaviour, IDamageable
     private GameObject GFX;
     [SerializeField]
     private GameObject Sprite;
+    private SpriteRenderer spriteRenderer;
     [Space]
     [Header("Parameters")]
     [SerializeField]
@@ -36,7 +37,8 @@ public class Player : MonoBehaviour, IDamageable
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        spriteMat = Sprite.GetComponent<SpriteRenderer>().material;
+        spriteRenderer = Sprite.GetComponent<SpriteRenderer>();
+        spriteMat = spriteRenderer.material;
         animator = GetComponent<Animator>();
     }
 
@@ -95,6 +97,9 @@ public class Player : MonoBehaviour, IDamageable
 	{
         rb.velocity = moveVelocity;
         animator.SetFloat("Speed", rb.velocity.magnitude);
+
+        if (moveInput.magnitude >= 0.1)
+            spriteRenderer.flipX = Vector3.Dot(Vector3.right, moveInput) < 0;
     }
 
     public void ApplyDamage(float damage, Vector3 knockback)
