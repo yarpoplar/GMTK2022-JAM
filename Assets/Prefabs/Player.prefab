@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 929555816224933495}
   - component: {fileID: 929555816224933494}
   - component: {fileID: 929555816224933449}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 929555817212772332}
   - component: {fileID: 929555817212772335}
   - component: {fileID: 929555817212772334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,9 +203,9 @@ GameObject:
   - component: {fileID: 929555817227865752}
   - component: {fileID: 929555817227865755}
   - component: {fileID: 929555817227865754}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,6 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
+  bulletPrefab: {fileID: 1823397484542466890, guid: 95b541a8559872d4d86bc8db04b3ef17, type: 3}
 --- !u!1 &929555817251534427
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 929555817251534424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CameraBrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +302,7 @@ GameObject:
   - component: {fileID: 929555817651176019}
   - component: {fileID: 929555817651176018}
   - component: {fileID: 929555817651176021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 929555817994427858}
   - component: {fileID: 929555817994427859}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CM vcam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +450,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4908485, y: 1}
+    m_SensorSize: {x: 1.3078203, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -467,7 +468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 929555818001350353}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +506,7 @@ GameObject:
   - component: {fileID: 929555818163897635}
   - component: {fileID: 1566977140464245635}
   - component: {fileID: 6723318126442679244}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
