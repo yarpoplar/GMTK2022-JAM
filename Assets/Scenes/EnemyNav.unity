@@ -1620,26 +1620,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 929555817227865757, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
   m_PrefabInstance: {fileID: 1699347494}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1051998530
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051998529}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 48e2c16e30547b34db6eca75d557597e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1188860275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,25 +2725,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 929555817227865754, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: dashTime
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 929555817227865754, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: moveSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 929555817227865754, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: dashVelocity
-      value: 1700
-      objectReference: {fileID: 0}
     - target: {fileID: 929555817227865757, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 929555818163897637, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: field of view
-      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
@@ -3828,7 +3792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561203999517297216, guid: 3b6da5f5982fc9f4ab0821fc830cb4a1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3561203999517297217, guid: 3b6da5f5982fc9f4ab0821fc830cb4a1, type: 3}
       propertyPath: m_RootOrder
