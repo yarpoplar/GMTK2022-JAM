@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+enum AnimationState { Idle, Walk, Hit, Dead };
+
 public class Enemy : MonoBehaviour, IDamageable
 {
     private NavMeshAgent navMeshAgent;
@@ -12,7 +14,7 @@ public class Enemy : MonoBehaviour, IDamageable
     void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        if ((!spriteRoot) || (sprite))
+        if ((!spriteRoot) || (!sprite))
         {
             Debug.LogError("Set sprite/spriteRoot for enemy!");
         }
