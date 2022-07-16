@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     private float moveSpeed = 15f;
     private Rigidbody rb = null;
 
+    [SerializeField]
+    private GameObject bulletPrefab;
 
     private Vector3 moveInput;
     private Vector3 moveVelocity;
@@ -19,6 +21,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+
+        if(Input.GetMouseButtonDown(0))
+		{
+            Instantiate(bulletPrefab, transform.position + (Vector3.up * 2), transform.rotation);
+		}
 
         // Movement and look
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
