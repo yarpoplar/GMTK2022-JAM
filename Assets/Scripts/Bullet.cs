@@ -15,16 +15,6 @@ public class Bullet : MonoBehaviour
     [Space]
     [SerializeField]
     private Rigidbody rb;
-    [SerializeField]
-    private GameObject VFX;
-
-    [SerializeField]
-    private bool isExplosive = false;
-    [SerializeField]
-    private float explosiveRadius = 1f;
-
-    [SerializeField]
-    private float destroyDelay = 1f;
 
     void Start()
     {
@@ -37,20 +27,6 @@ public class Bullet : MonoBehaviour
         if (other.TryGetComponent(out IDamageable enemy))
             enemy.ApplyDamage(Damage, (other.transform.position - GameManager.Instance.Player.transform.position).normalized * Knockback);
 
-        Destroy(gameObject, destroyDelay);	
+        Destroy(gameObject);	
 	}
-
-    private void OnDestroy()
-    {
-        if (isExplosive)
-        {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, explosiveRadius);
-            foreach (Collider hit in colliders)
-                if (hit.TryGetComponent(out IDamageable toDamage))
-                    toDamage.ApplyDamage(Damage);
-        }
-
-        if (VFX != null)
-            Instantiate(VFX, transform.position, Quaternion.identity);
-    }
 }

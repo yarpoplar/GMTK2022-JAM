@@ -15,11 +15,8 @@ public class Enemy : MonoBehaviour, IDamageable
     public GameObject spriteRoot;
     public GameObject sprite;
 
-    public Weapon EnemyWeapon;
-
     private NavMeshAgent navMeshAgent;
     private Animator animator;
-    private SpriteRenderer spriteRenderer;
     private Material spriteMat;
     private Tween hitTween;
     private Rigidbody rbody;
@@ -32,15 +29,8 @@ public class Enemy : MonoBehaviour, IDamageable
         {
             Debug.LogError("Set sprite/spriteRoot for enemy!");
         }
-        spriteRenderer = sprite.GetComponent<SpriteRenderer>();
-        spriteMat = spriteRenderer.material;
+        spriteMat = sprite.GetComponent<SpriteRenderer>().material;
         rbody = GetComponent<Rigidbody>();
-    }
-
-    private void Update()
-    {
-        Vector3 playerPos = GameManager.Instance.Player.transform.position;
-        EnemyWeapon.gameObject.transform.LookAt(new Vector3(playerPos.x, transform.position.y, playerPos.z));
     }
 
     private void FixedUpdate()
@@ -48,9 +38,6 @@ public class Enemy : MonoBehaviour, IDamageable
         if (navMeshAgent.enabled)
             navMeshAgent.destination = GameManager.Instance.Player.transform.position;
         animator.SetFloat("Speed", navMeshAgent.velocity.magnitude);
-
-        if (navMeshAgent.velocity.magnitude >= 0.1)
-            spriteRenderer.flipX = Vector3.Dot(Vector3.right, navMeshAgent.velocity.normalized) < 0;
     }
 
     private void LateUpdate()
