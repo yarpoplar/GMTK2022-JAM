@@ -7,6 +7,14 @@ public class GameManager : MonoBehaviour
 {
     public GameObject Player;
 
+    [Header("Dice")]
+    [SerializeField]
+    private float diceThrowCooldown = 30f;
+    [SerializeField]
+    private Transform diceSpawn;
+    [SerializeField]
+    private GameObject weaponDicePrefab;
+
     [Header("Weapon Manager")]
     [SerializeField]
     public List<Weapon> playerWeapons = null;
@@ -14,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     private int currentWeapon = 0;
     // TEMP FOR TESTING
-    private float changeCooldown = 0f;
+    private float diceTime = 0f;
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -35,17 +43,24 @@ public class GameManager : MonoBehaviour
 
 	private void Update()
 	{
-        changeCooldown += Time.deltaTime;
+        diceTime += Time.deltaTime;
 
-        if (changeCooldown >= 5f)
+        if (diceTime >= diceThrowCooldown)
         {
-            SwitchWeapon(Random.Range(0, playerWeapons.Count - 1), 5);
-            changeCooldown = 0f;
+            ThrowDice(0, 0, 0);
+            diceTime = 0f;
         }
     }
 
-    public void SwitchWeapon(int index, int ammo)
+    private void ThrowDice(int goodDices, int badDices, int chaoticDices)
+	{
+        Instantiate(weaponDicePrefab, diceSpawn.position, Quaternion.Euler(new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360))));
+    }
+
+    public void SwitchWeapon(int index)
     {
+        int ammo = Random.Range(3, 10);
+
         playerWeapons[currentWeapon].gameObject.SetActive(false);
         playerWeapons[index].gameObject.SetActive(true);
         playerWeapons[index].SetAmmo(ammo);

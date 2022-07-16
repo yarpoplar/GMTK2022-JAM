@@ -1,13 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RollDice : MonoBehaviour
 {
+    [System.Serializable]
+    public class DiceEvent : UnityEvent<int>
+    {
+    }
+
     private bool bRollFinished;
     private Rigidbody rbody;
 
-    void Start() 
+    [SerializeField]
+    private List<DiceEvent> rollEvents;
+
+    void Start()
     {
         rbody = gameObject.GetComponent<Rigidbody>();
         rbody.AddForce(Random.insideUnitSphere * 10, ForceMode.Impulse);
@@ -20,23 +29,26 @@ public class RollDice : MonoBehaviour
         if ((!bRollFinished) && (rbody.IsSleeping()))
         {
             bRollFinished = true;
-            Debug.Log(GetRollResult().GetComponent<RollSide>().Name);
+            GetRollResult();
         }
     }
 
-    GameObject GetRollResult()
+    public void GetRollResult()
     {
         Transform resultTransform = null;
         float maxDot = -2;
-        foreach(Transform child in transform)
+        int i = 0;
+        foreach (Transform child in transform)
         {
+            i++;
             float dot = Vector3.Dot(child.position - gameObject.transform.position, Vector3.up);
             if (dot > maxDot)
             {
                 resultTransform = child;
                 maxDot = dot;
+                rollEvents[i - 1].Invoke(i);
+                Destroy(gameObject, 3f);
             }
         }
-        return resultTransform.gameObject;
     }
 }
