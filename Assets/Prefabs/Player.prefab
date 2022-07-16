@@ -147,7 +147,7 @@ MonoBehaviour:
   moveSpeed: 15
   dashCooldown: 0.5
   dashTime: 0.2
-  dashVelocity: 2000
+  dashVelocity: 3000
   GFX: {fileID: 929555818001350352}
 --- !u!1 &929555817251534427
 GameObject:

@@ -59,8 +59,8 @@ public class Player : MonoBehaviour
             rb.AddForce(direction * dashVelocity * Time.fixedDeltaTime, ForceMode.VelocityChange);
         }
 
-        GFX.transform.DOScale(new Vector3(1, 1, 1), dashTime / 3);
-        GFX.transform.DOLocalRotate(new Vector3(0, 0, 360), dashTime / 3);
+        GFX.transform.DOScale(new Vector3(1, 1, 1), dashTime / 2);
+        GFX.transform.DOLocalRotate(new Vector3(0, 0, 360), dashTime / 2);
 
         while (timeLeft <= (dashTime / 2))
         {
