@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     private float Speed = 4000f;
     [SerializeField]
     private float Damage = 1;
+    [SerializeField]
+    private float Livetime = 4f;
     [Space]
     [SerializeField]
     private Rigidbody rb;
@@ -15,6 +17,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb.AddForce(transform.forward * Speed, ForceMode.Acceleration);
+        Destroy(gameObject, Livetime);
     }
 
 	private void OnTriggerEnter(Collider other)
