@@ -8,16 +8,15 @@ public class Weapon : MonoBehaviour
 	[SerializeField]
 	private float fireSpeed;
 	[SerializeField]
-	private float cooldown = 0f;
-	[SerializeField]
 	private float bulletsPerShot;
 	[SerializeField]
-	private Vector2 spread;
+	private float spread;
 	[SerializeField]
 	private bool isAutomatic = false;
 	[SerializeField]
 	private GameObject bulletPrefab;
 
+	private float cooldown = 0f;
 
 	void Update()
 	{
@@ -39,7 +38,11 @@ public class Weapon : MonoBehaviour
 
 	public void Shoot()
 	{
-		Instantiate(bulletPrefab, transform.position, transform.rotation);
+		for (int i = 0; i < bulletsPerShot; i++)
+		{
+			Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(0f, Random.Range(-spread, spread), 0f));
+		}
+
 		cooldown = 0f;
 	}
 }
