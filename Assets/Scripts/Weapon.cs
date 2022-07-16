@@ -59,15 +59,12 @@ public class Weapon : MonoBehaviour
 		if (spriteRenderer)
 			spriteRenderer.flipY = Vector3.Dot(Vector3.right, transform.forward) < 0;
 
-        if (cooldown < fireSpeed || ammo == 0)
-        {
-            cooldown += Time.deltaTime;
-            return;
-        }
-
         if (isEnemy)
-            return;
-			
+        {
+            if (cooldown < fireSpeed || ammo == 0)
+                cooldown += Time.deltaTime;
+			return;
+		}
 
 		// Mouse Look
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -79,16 +76,21 @@ public class Weapon : MonoBehaviour
 			Vector3 lookPos = ray.GetPoint(rayLength);
 			transform.LookAt(new Vector3(lookPos.x, transform.position.y, lookPos.z));
 		}
-		
 
-		if (isAutomatic)
+        if (cooldown < fireSpeed || ammo == 0)
+        {
+            cooldown += Time.deltaTime;
+		}
+
+
+        if (isAutomatic)
 		{
 			if (Input.GetMouseButton(0))
 				Shoot();
 		}
 		else
 			if (Input.GetMouseButtonDown(0))
-			Shoot();
+				Shoot();
 	}
 
 	public void Shoot()
