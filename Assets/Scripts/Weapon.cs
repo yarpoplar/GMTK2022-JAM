@@ -5,6 +5,12 @@ using DG.Tweening;
 
 public class Weapon : MonoBehaviour
 {
+	[Header("Setup")]
+	[SerializeField]
+	private GameObject bulletPrefab;
+	[SerializeField]
+	private Transform firePivot;
+	[Space]
 	[Header("Parameters")]
 	[SerializeField]
 	private float fireSpeed;
@@ -14,10 +20,6 @@ public class Weapon : MonoBehaviour
 	private float spread;
 	[SerializeField]
 	private bool isAutomatic = false;
-	[SerializeField]
-	private GameObject bulletPrefab;
-	[SerializeField]
-	private Transform firePivot;
 
 	private float cooldown = 0f;
 	public int ammo = 5;
@@ -47,7 +49,7 @@ public class Weapon : MonoBehaviour
 		if (groundPlane.Raycast(ray, out rayLength))
 		{
 			Vector3 lookPos = ray.GetPoint(rayLength);
-			firePivot.LookAt(new Vector3(lookPos.x, transform.position.y, lookPos.z));
+			transform.LookAt(new Vector3(lookPos.x, transform.position.y, lookPos.z));
 		}
 
 
@@ -77,6 +79,6 @@ public class Weapon : MonoBehaviour
 		ammo--;
 		cooldown = 0f;
 
-		WeaponManager.instance.ammoCounter.text = ammo.ToString();
+		GameManager.Instance.ammoCounter.text = ammo.ToString();
 	}
 }

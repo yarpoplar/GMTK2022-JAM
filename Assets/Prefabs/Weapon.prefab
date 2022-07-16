@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1382968685320762444}
   - component: {fileID: 1382968685320762483}
   m_Layer: 6
-  m_Name: FishingRod
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
