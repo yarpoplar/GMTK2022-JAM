@@ -9,7 +9,9 @@ public class Weapon : MonoBehaviour
 	[Header("Setup")]
 	[SerializeField]
 	private GameObject bulletPrefab;
-    [SerializeField]
+	[SerializeField]
+	private ParticleSystem muzzleVFX;
+	[SerializeField]
     private SpriteRenderer spriteRenderer;
     [SerializeField]
 	private Transform firePivot;
@@ -117,5 +119,12 @@ public class Weapon : MonoBehaviour
 		Camera.main.GetComponent<CinemachineImpulseSource>().GenerateImpulse(shake);
 		// Recoil
 		transform.DOPunchPosition(recoilVector, cooldown / 2);
+		// Muzzle
+		if (muzzleVFX == null)
+			return;
+
+		muzzleVFX.Play();
+		ParticleSystem.EmissionModule em = muzzleVFX.emission;
+		em.enabled = true;
 	}
 }
