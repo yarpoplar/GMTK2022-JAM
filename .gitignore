@@ -10,7 +10,7 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 /[Us]serSettings/
-/[Aa]ssets/AmplifyShaderEditor/Examples
+/[Aa]ssets/AmplifyShaderEditor/Examples/*.meta
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
