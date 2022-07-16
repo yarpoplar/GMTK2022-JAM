@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Cinemachine;
 
 public class Weapon : MonoBehaviour
 {
@@ -75,6 +76,8 @@ public class Weapon : MonoBehaviour
 		{
 			Instantiate(bulletPrefab, firePivot.position, firePivot.rotation * Quaternion.Euler(0f, Random.Range(-spread, spread), 0f));
 		}
+
+		Camera.main.GetComponent<CinemachineImpulseSource>().GenerateImpulse();
 
 		ammo--;
 		cooldown = 0f;

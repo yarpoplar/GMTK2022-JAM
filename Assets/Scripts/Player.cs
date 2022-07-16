@@ -5,6 +5,12 @@ using DG.Tweening;
 
 public class Player : MonoBehaviour, IDamageable
 {
+    [Header("Setup")]
+    [SerializeField]
+    private GameObject GFX;
+    [SerializeField]
+    private GameObject Sprite;
+    [Space]
     [Header("Parameters")]
     [SerializeField]
     public float Health = 100;
@@ -17,10 +23,6 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField]
     private float dashVelocity = 1200f;
     private Rigidbody rb = null;
-    [SerializeField]
-    private GameObject GFX;
-    [SerializeField]
-    private GameObject Sprite;
 
     private Vector3 moveInput;
     private Vector3 moveVelocity;
@@ -44,7 +46,7 @@ public class Player : MonoBehaviour, IDamageable
 
         // Movement
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
-		moveVelocity = moveInput * moveSpeed;
+		rb.AddForce(moveInput * moveSpeed * Time.deltaTime, ForceMode.VelocityChange);
 
         if (Input.GetKeyDown(KeyCode.Space) && moveInput != Vector3.zero && canDash)
             StartCoroutine(DashRoutine(moveInput));
