@@ -29,12 +29,8 @@ public class Weapon : MonoBehaviour
 	private float shake = 1f;
 	[SerializeField]
 	private bool isAutomatic = false;
-<<<<<<< Updated upstream
 	[SerializeField]
 	private Vector3 recoilVector = new Vector3(1f, 0f, 0.2f);
-=======
-	
->>>>>>> Stashed changes
 
 	private float cooldown = 0f;
 	public int baseAmmo = 5;
@@ -61,7 +57,13 @@ public class Weapon : MonoBehaviour
 		if (spriteRenderer)
 			spriteRenderer.flipY = Vector3.Dot(Vector3.right, transform.forward) < 0;
 
-		if (isEnemy)
+        if (cooldown < fireSpeed || ammo == 0)
+        {
+            cooldown += Time.deltaTime;
+            return;
+        }
+
+        if (isEnemy)
             return;
 			
 
@@ -75,13 +77,7 @@ public class Weapon : MonoBehaviour
 			Vector3 lookPos = ray.GetPoint(rayLength);
 			transform.LookAt(new Vector3(lookPos.x, transform.position.y, lookPos.z));
 		}
-
-
-		if (cooldown < fireSpeed || ammo == 0)
-		{
-			cooldown += Time.deltaTime;
-			return;
-		}
+		
 
 		if (isAutomatic)
 		{
@@ -95,7 +91,10 @@ public class Weapon : MonoBehaviour
 
 	public void Shoot()
 	{
-		for (int i = 0; i < bulletsPerShot; i++)
+        if (cooldown < fireSpeed || ammo == 0)
+            return;
+
+        for (int i = 0; i < bulletsPerShot; i++)
 		{
 			var bullet = Instantiate(bulletPrefab, firePivot.position, firePivot.rotation * Quaternion.Euler(Random.Range(-spread, spread), 0f, 0f));
 			if (additionalForce != Vector3.zero)
@@ -103,10 +102,13 @@ public class Weapon : MonoBehaviour
 		}
 
 		WeaponFeedback();
-
-		ammo--;
+		
 		cooldown = 0f;
-		GameManager.Instance.ammoCounter.text = ammo.ToString();
+        if (!isEnemy)
+        {
+            ammo--;
+            GameManager.Instance.ammoCounter.text = ammo.ToString();
+        }
 	}
 
 	public void WeaponFeedback()

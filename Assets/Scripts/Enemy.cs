@@ -37,6 +37,16 @@ public class Enemy : MonoBehaviour, IDamageable
         rbody = GetComponent<Rigidbody>();
     }
 
+    //void Start()
+    //{
+    //    StartCoroutine(ShootRoutine());
+    //}
+
+    //IEnumerator ShootRoutine()
+    //{
+    //    yield return new WaitForSeconds(EnemyWeapon.fireSpeed);
+    //}
+
     private void Update()
     {
         Vector3 playerPos = GameManager.Instance.Player.transform.position;
@@ -51,6 +61,8 @@ public class Enemy : MonoBehaviour, IDamageable
 
         if (navMeshAgent.velocity.magnitude >= 0.1)
             spriteRenderer.flipX = Vector3.Dot(Vector3.right, navMeshAgent.velocity.normalized) < 0;
+
+        EnemyWeapon.Shoot();
     }
 
     private void LateUpdate()

@@ -24,6 +24,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8365085876888609163, guid: 2dfc48c5c62d078419dba208cf9a65f7, type: 3}
+      propertyPath: fireSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365085876888609163, guid: 2dfc48c5c62d078419dba208cf9a65f7, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 2981826287083485733}

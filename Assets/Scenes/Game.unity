@@ -689,17 +689,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575867879}
   m_Mesh: {fileID: -462981019419857548, guid: 7e0dc0a424913ff4bbf6f42bbdd9b744, type: 3}
---- !u!114 &580005015 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7405793113400902942, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-  m_PrefabInstance: {fileID: 1699347494}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &585724662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,7 +1359,7 @@ PrefabInstance:
     - target: {fileID: 1896440696541131788, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
       propertyPath: playerWeapons.Array.data[0]
       value: 
-      objectReference: {fileID: 580005015}
+      objectReference: {fileID: 0}
     - target: {fileID: 4530279501930179863, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -3822,6 +3811,10 @@ PrefabInstance:
     - target: {fileID: 598723496938744829, guid: 75c6182c495be3c4e8f77a9b32756f05, type: 3}
       propertyPath: m_Name
       value: Enemy_Toadman
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015623127816798689, guid: 75c6182c495be3c4e8f77a9b32756f05, type: 3}
+      propertyPath: fireSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75c6182c495be3c4e8f77a9b32756f05, type: 3}
