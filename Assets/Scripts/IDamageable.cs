@@ -6,5 +6,5 @@ using UnityEngine;
 //method.
 public interface IDamageable
 {
-    virtual void ApplyDamage(float damage) { }
+    virtual void ApplyDamage(float damage, Vector3 knockback = default(Vector3)) { }
 }

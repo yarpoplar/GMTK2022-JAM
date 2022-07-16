@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5bf1679f7d286444b864ec160de0a185, type: 2}
+  - {fileID: 2100000, guid: 9d1ae21b6061ef94c91f131fe7a78ef7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -162,7 +162,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -185,7 +185,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 5, z: 1}
+  m_Size: {x: 2, y: 7, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3561203999517297222
 MonoBehaviour:
