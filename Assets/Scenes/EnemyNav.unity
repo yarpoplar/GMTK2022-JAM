@@ -329,6 +329,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &394783225 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 929555816879958262, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &613280878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -391,19 +402,19 @@ PrefabInstance:
     - target: {fileID: 4075044328098450591, guid: c4f596830d8bb2c49ba14cfc96ccc750, type: 3}
       propertyPath: weapons.Array.data[0]
       value: 
-      objectReference: {fileID: 1382968685320762483, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
+      objectReference: {fileID: 394783225}
     - target: {fileID: 4075044328098450591, guid: c4f596830d8bb2c49ba14cfc96ccc750, type: 3}
       propertyPath: weapons.Array.data[1]
       value: 
-      objectReference: {fileID: 1382968685320762483, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
+      objectReference: {fileID: 1726293211}
     - target: {fileID: 4075044328098450591, guid: c4f596830d8bb2c49ba14cfc96ccc750, type: 3}
       propertyPath: weapons.Array.data[2]
       value: 
-      objectReference: {fileID: 1382968685320762483, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
+      objectReference: {fileID: 1948074994}
     - target: {fileID: 4075044328098450591, guid: c4f596830d8bb2c49ba14cfc96ccc750, type: 3}
       propertyPath: weapons.Array.data[3]
       value: 
-      objectReference: {fileID: 1382968685320762483, guid: dfdf10cac294e124f8fd62980ab4c3f7, type: 3}
+      objectReference: {fileID: 1033747407}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4f596830d8bb2c49ba14cfc96ccc750, type: 3}
 --- !u!1 &633502708
@@ -848,6 +859,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025606732}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1033747407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1863007263118474708, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1188860275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,6 +1315,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704394225}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1726293211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8800944679589766910, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1825876291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1366,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1948074994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 795323450292614729, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3561203998761580170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1343,6 +1387,10 @@ PrefabInstance:
     - target: {fileID: 3561203999517297216, guid: 3b6da5f5982fc9f4ab0821fc830cb4a1, type: 3}
       propertyPath: m_Name
       value: Enemy_Temp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561203999517297216, guid: 3b6da5f5982fc9f4ab0821fc830cb4a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3561203999517297217, guid: 3b6da5f5982fc9f4ab0821fc830cb4a1, type: 3}
       propertyPath: m_RootOrder

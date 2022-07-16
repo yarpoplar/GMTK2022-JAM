@@ -92,10 +92,8 @@ public class Player : MonoBehaviour, IDamageable
 
     public void ApplyDamage(float damage, Vector3 knockback)
     {
-        Debug.Log("Player takes damage");
         knockback.y = 0;
         StartCoroutine(HitRoutine(knockback * 2000));
-
         Health -= damage;
     }
 
