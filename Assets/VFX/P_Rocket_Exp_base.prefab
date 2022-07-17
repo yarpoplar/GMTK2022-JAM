@@ -46,7 +46,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -604,7 +604,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 50
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -4885,6 +4885,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 383701144827369438, guid: 72027ed5d761fd3478d281340b4d9006, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 383701144827369438, guid: 72027ed5d761fd3478d281340b4d9006, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 383701144827369438, guid: 72027ed5d761fd3478d281340b4d9006, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.6
       objectReference: {fileID: 0}
@@ -4973,6 +4981,14 @@ PrefabInstance:
     - target: {fileID: 1835190920821454942, guid: da3163d449fc8b04cb78e5f37d47f84f, type: 3}
       propertyPath: looping
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835190920821454942, guid: da3163d449fc8b04cb78e5f37d47f84f, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835190920821454942, guid: da3163d449fc8b04cb78e5f37d47f84f, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1835190920821454942, guid: da3163d449fc8b04cb78e5f37d47f84f, type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -5103,6 +5119,18 @@ PrefabInstance:
     - target: {fileID: 8043949324600420869, guid: 0ab71adf2937e7648a96753690fd09ee, type: 3}
       propertyPath: looping
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043949324600420869, guid: 0ab71adf2937e7648a96753690fd09ee, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043949324600420869, guid: 0ab71adf2937e7648a96753690fd09ee, type: 3}
+      propertyPath: autoRandomSeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043949324600420869, guid: 0ab71adf2937e7648a96753690fd09ee, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ab71adf2937e7648a96753690fd09ee, type: 3}
