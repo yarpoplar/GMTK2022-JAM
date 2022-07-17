@@ -82,6 +82,8 @@ public class Weapon : MonoBehaviour
             cooldown += Time.deltaTime;
 		}
 
+		if (GameManager.Instance.Player.GetComponent<Player>().IsDead)
+			return;
 
         if (isAutomatic)
 		{

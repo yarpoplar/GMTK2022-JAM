@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public TaskBase CurrentTask;
 
+    [SerializeField] 
+    private GameObject endScreen;
+
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
@@ -47,6 +51,24 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         ThrowDice(0, 0, 0);
+    }
+
+    public void GameOver()
+    {
+        endScreen.gameObject.SetActive(true);
+        StartCoroutine(EndScreen());
+    }
+
+    IEnumerator EndScreen()
+    {
+        yield return new WaitForSeconds(3);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("MainMenu");
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
     }
 
     private void Update()

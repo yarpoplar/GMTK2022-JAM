@@ -10,11 +10,15 @@ public class UIHandler : MonoBehaviour
     public TMP_Text WeaponName;
     public TMP_Text TaskName;
 
+    private Vector2 weaponPos, taskPos;
+
     private Player player;
     // Start is called before the first frame update
     private void Start()
     {
         player = GameManager.Instance.Player.GetComponent<Player>();
+        weaponPos = WeaponName.rectTransform.anchoredPosition;
+        //WeaponName.rectTransform.anchoredPosition = new Vector2(-200, weaponPos.y);
     }
 
     // Update is called once per frame

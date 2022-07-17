@@ -35,6 +35,8 @@ public class Player : MonoBehaviour, IDamageable
     private Tween hitTween;
     private Animator animator;
 
+    public bool IsDead = false;
+
     private bool isDashing = false;
     private bool canDash = true;
 
@@ -52,6 +54,9 @@ public class Player : MonoBehaviour, IDamageable
     void Update()
     {
         if (isDashing)
+            return;
+
+        if (IsDead)
             return;
 
         // Movement
@@ -116,6 +121,11 @@ public class Player : MonoBehaviour, IDamageable
         knockback.y = 0;
         StartCoroutine(HitRoutine(knockback * 2000));
         Health -= damage;
+        if ((Health <= 0) && (!IsDead))
+        {
+            IsDead = true;
+            GameManager.Instance.GameOver();
+        }
     }
 
     private IEnumerator HitRoutine(Vector3 knockback)
