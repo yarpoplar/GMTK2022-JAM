@@ -32,7 +32,7 @@ public class RollDice : MonoBehaviour
             GetRollResult();
         }
 
-        rbody.AddForce(new Vector3(0, -1, 0) * 10 * rbody.mass, ForceMode.Force);
+        //rbody.AddForce(new Vector3(0, -1, 0) * 10 * rbody.mass, ForceMode.Force);
     }
 
     public void GetRollResult()

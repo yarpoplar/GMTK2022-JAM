@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: f7a207ad83ace36439d1cb65d4dcfea1, type: 2}
+--- !u!114 &71420050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5729682704508588976, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &77471091 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2397422149145924223, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &100377221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1491,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &803517716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 659736775559700554, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832284781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,9 +1639,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2129784342}
     - target: {fileID: 1896440696541131788, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+      propertyPath: playerWeapons.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896440696541131788, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
       propertyPath: playerWeapons.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 803517716}
+    - target: {fileID: 1896440696541131788, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+      propertyPath: playerWeapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1636346778}
+    - target: {fileID: 1896440696541131788, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+      propertyPath: playerWeapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1632871759}
+    - target: {fileID: 1896440696541131788, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+      propertyPath: playerWeapons.Array.data[3]
+      value: 
+      objectReference: {fileID: 71420050}
+    - target: {fileID: 1896440696541131788, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+      propertyPath: playerWeapons.Array.data[4]
+      value: 
+      objectReference: {fileID: 77471091}
+    - target: {fileID: 1896440696541131788, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+      propertyPath: playerWeapons.Array.data[5]
+      value: 
+      objectReference: {fileID: 1024549057}
     - target: {fileID: 4530279501930179863, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1793,6 +1850,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924918704}
   m_Mesh: {fileID: -462981019419857548, guid: 7e0dc0a424913ff4bbf6f42bbdd9b744, type: 3}
+--- !u!114 &1024549057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7190560884961362872, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1025606732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,6 +2920,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582976392}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1632871759 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7525088129364717347, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1636346778 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8535669274721562993, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
+  m_PrefabInstance: {fileID: 1699347494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8537390baf1be9f45b9ec3ec5edb8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1658003023
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,11 +3039,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658003023}
   m_Mesh: {fileID: -462981019419857548, guid: 7e0dc0a424913ff4bbf6f42bbdd9b744, type: 3}
---- !u!198 &1662872610 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6431574441278936313, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-  m_PrefabInstance: {fileID: 1699347494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1699347494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2961,10 +3046,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 549966070444433034, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 929555817227865752, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3012,58 +3093,6 @@ PrefabInstance:
     - target: {fileID: 929555817227865757, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 929555817994427858, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 929555817994427858, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.5606288
-      objectReference: {fileID: 0}
-    - target: {fileID: 929555818163897634, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 929555818163897634, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.5606288
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441698573666479295, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4685406281124277616, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190560884961362822, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190560884961362872, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: muzzleVFX
-      value: 
-      objectReference: {fileID: 1662872610}
-    - target: {fileID: 7415317423113245155, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7875675513976798584, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8535669274721562958, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8535669274721562959, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715254569612496817, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
@@ -3574,7 +3603,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3588,7 +3617,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3602,7 +3631,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3616,7 +3645,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3630,7 +3659,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3905,7 +3934,59 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1292993854}
         m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: MakePlayerSlower
+        m_MethodName: MakeCameraCloser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1292993854}
+        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
+        m_MethodName: ResetAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1292993854}
+        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
+        m_MethodName: MakeWeaponsSlower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1292993854}
+        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
+        m_MethodName: ResetAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1292993854}
+        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
+        m_MethodName: MakeCameraCloser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3957,59 +4038,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1292993854}
         m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: MakePlayerSlower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1292993854}
-        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: ResetAll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1292993854}
-        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: MakePlayerSlower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1292993854}
-        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: ResetAll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1292993854}
-        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: MakePlayerSlower
+        m_MethodName: MakeCameraCloser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
