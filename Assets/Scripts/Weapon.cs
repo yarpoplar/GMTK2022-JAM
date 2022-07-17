@@ -111,7 +111,7 @@ public class Weapon : MonoBehaviour
         if (!isEnemy)
         {
             ammo--;
-            GameManager.Instance.ammoCounter.text = ammo.ToString();
+            //GameManager.Instance.ammoCounter.text = ammo.ToString();
         }
 	}
 

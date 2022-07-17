@@ -6,12 +6,16 @@ public class TaskBase : MonoBehaviour
 {
     [SerializeField]
     public string Name = "Task name";
+    [SerializeField]
+    public string Counter = "0";
+    [SerializeField]
+    public string PostCounter = "/10";
     private bool TaskCompleted = false;
-    private Player player;
+    protected Player player;
 
     protected virtual void Start()
     {
-        GameManager.Instance.TaskInit(this);
+        //GameManager.Instance.TaskInit(this);
         player = GameManager.Instance.Player.GetComponent<Player>();
     }
 
@@ -22,6 +26,7 @@ public class TaskBase : MonoBehaviour
         {
             TaskCompleted = true;
             GameManager.Instance.TaskCompleted();
+            Destroy(this);
         }
     }
 }

@@ -20,11 +20,12 @@ public class GameManager : MonoBehaviour
     public List<Weapon> playerWeapons = null;
     public TMP_Text ammoCounter;
 
-    private int currentWeapon = 0;
+    public int currentWeapon = 0;
+    public bool HaveWeapon = false;
     private float diceTime = 15f;
 
     [SerializeField]
-    private TaskBase CurrentTask;
+    public TaskBase CurrentTask;
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -43,15 +44,20 @@ public class GameManager : MonoBehaviour
         Player = players[0];
     }
 
-	private void Update()
-	{
-        diceTime += Time.deltaTime;
+    private void Start()
+    {
+        ThrowDice(0, 0, 0);
+    }
 
-        if (diceTime >= diceThrowCooldown)
-        {
-            ThrowDice(0, 0, 0);
-            diceTime = 0f;
-        }
+    private void Update()
+	{
+        //diceTime += Time.deltaTime;
+
+        //if (diceTime >= diceThrowCooldown)
+        //{
+        //    ThrowDice(0, 0, 0);
+        //    diceTime = 0f;
+        //}
     }
 
     private void ThrowDice(int goodDices, int badDices, int chaoticDices)
@@ -62,6 +68,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchWeapon(int index)
     {
+        HaveWeapon = true;
         int ammo = Random.Range(5, 10);
 
         playerWeapons[currentWeapon].gameObject.SetActive(false);
@@ -74,16 +81,17 @@ public class GameManager : MonoBehaviour
 
     public void UpdateWeaponUI(int ammo)
 	{
-        ammoCounter.text = ammo.ToString();
+        //ammoCounter.text = ammo.ToString();
     }
 
-    public void TaskInit(TaskBase task)
+    public void NewTask(TaskBase task)
     {
-        Debug.Log(task.name);
+        CurrentTask = Instantiate(task, gameObject.transform);
+        CurrentTask.gameObject.SetActive(true);
     }
 
     public void TaskCompleted()
     {
-
+        ThrowDice(0, 0, 0);
     }
 }

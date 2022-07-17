@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class RollDice : MonoBehaviour
 {
@@ -19,8 +20,11 @@ public class RollDice : MonoBehaviour
     void Start()
     {
         rbody = gameObject.GetComponent<Rigidbody>();
-        rbody.AddForce(Random.insideUnitSphere * 10, ForceMode.Impulse);
-        rbody.AddTorque(Random.insideUnitSphere * 10, ForceMode.Impulse);
+        rbody.AddForce(Random.insideUnitSphere * Random.Range(10, 20) + Vector3.up * Random.Range(30, 60), ForceMode.Impulse);
+        rbody.AddTorque(Random.insideUnitSphere * Random.Range(10, 60), ForceMode.Impulse);
+
+        transform.localScale = Vector3.zero;
+        transform.DOScale(1, 0.3f);
     }
 
     // Update is called once per frame
@@ -40,6 +44,7 @@ public class RollDice : MonoBehaviour
         Transform resultTransform = null;
         float maxDot = -2;
         int i = 0;
+        int resultIndex = 0;
         foreach (Transform child in transform)
         {
             i++;
@@ -48,9 +53,11 @@ public class RollDice : MonoBehaviour
             {
                 resultTransform = child;
                 maxDot = dot;
-                rollEvents[i - 1].Invoke(i);
-                Destroy(gameObject, 3f);
+                resultIndex = i;
+                
             }
         }
+        rollEvents[resultIndex - 1].Invoke(resultIndex);
+        Destroy(gameObject, 3f);
     }
 }
