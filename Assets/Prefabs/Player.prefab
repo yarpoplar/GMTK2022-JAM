@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GFX: {fileID: 929555818001350352}
+  DashVFX: {fileID: 0}
   Sprite: {fileID: 4854437278096301505}
   Health: 100
   MaxHealth: 100
@@ -269,7 +270,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2295408, y: 1}
+    m_SensorSize: {x: 2.1958175, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
