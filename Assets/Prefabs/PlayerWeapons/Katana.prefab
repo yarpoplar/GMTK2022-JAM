@@ -51,9 +51,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2899752690999529888, guid: de499b01a9c513a43bde122feeb85db8, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5009860478143003349, guid: de499b01a9c513a43bde122feeb85db8, type: 3}
       propertyPath: m_Name
       value: P_Katana_Slash
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524629390948349310, guid: de499b01a9c513a43bde122feeb85db8, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de499b01a9c513a43bde122feeb85db8, type: 3}
@@ -168,6 +176,10 @@ PrefabInstance:
     - target: {fileID: 8280583222723949671, guid: 6824a384c0c600048a1522ce9005f144, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965697851743128216, guid: 6824a384c0c600048a1522ce9005f144, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6824a384c0c600048a1522ce9005f144, type: 3}
