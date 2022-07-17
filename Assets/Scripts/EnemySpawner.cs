@@ -1,32 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.AI;
+
+[System.Serializable]
+public struct SpawnStruct
+{
+    public Enemy[] EnemyTypes;
+    public int MaxEnemies;
+    public float SpawnInterval;
+}
 
 public class EnemySpawner : MonoBehaviour
 {
+    public bool DoSpawn = true;
     public float Radius = 30f;
     [SerializeField]
     public GameObject enemyPrefab;
-    // Start is called before the first frame update
+    [SerializeField]
+    public SpawnStruct[] SpawnRules;
+    //In seconds
+    float TimePassed = 0f;
+
     void Start()
     {
-        //StartCoroutine(SpawnRoutine());
-        Vector2 randomCircle = Random.insideUnitCircle;
-        Vector3 randomPos = new Vector3(randomCircle.x, 0, randomCircle.y) * Radius;
-        Instantiate(enemyPrefab, randomPos, Quaternion.Euler(Random.Range(-360, 360), 0f, 0f));
-        //NavMeshHit myNavHit;
-        //if (NavMesh.SamplePosition(Random.insideUnitCircle * Radius, out myNavHit, 100, -1))
-        //{
-        //    Instantiate(enemyPrefab, myNavHit.position, Quaternion.Euler(Random.Range(-360, 360), 0f, 0f));
-        //}
+        StartCoroutine(SpawnRoutine());
     }
 
-    //IEnumerator SpawnRoutine()
-    //{
+    private void Update()
+    {
+        TimePassed += Time.deltaTime;
+    }
 
-    //}
+    IEnumerator SpawnRoutine()
+    {
+        int index = Mathf.FloorToInt(TimePassed/60);
+        SpawnStruct currentSpawnStruct = SpawnRules[index];
+        if (DoSpawn)
+            SpawnEnemy(currentSpawnStruct.EnemyTypes[Random.Range(0, currentSpawnStruct.EnemyTypes.Length)]);
+        yield return new WaitForSeconds(currentSpawnStruct.SpawnInterval);
+        StartCoroutine(SpawnRoutine());
+    }
+
+    void SpawnEnemy(Enemy EnemyType)
+    {
+        Vector2 randomCircle = (Random.insideUnitCircle).normalized;
+        Vector3 randomPos = new Vector3(randomCircle.x, 0, randomCircle.y) * Radius;
+        Instantiate(EnemyType, randomPos, Quaternion.identity);
+    }
 
     void OnDrawGizmosSelected()
     {

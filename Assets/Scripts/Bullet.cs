@@ -34,8 +34,11 @@ public class Bullet : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-        if (other.TryGetComponent(out IDamageable enemy))
-            enemy.ApplyDamage(Damage, (other.transform.position - GameManager.Instance.Player.transform.position).normalized * Knockback);
+        if (other.transform.root.TryGetComponent(out IDamageable enemy))
+        {
+            //enemy.ApplyDamage(Damage, (Vector3.Scale(transform.position - other.transform.root.transform.position, new Vector3(1, 0, 1))).normalized * Knockback);
+            enemy.ApplyDamage(Damage, (rb.velocity).normalized * Knockback);
+        }
 
         Destroy(gameObject, destroyDelay);	
 	}

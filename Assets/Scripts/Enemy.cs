@@ -50,7 +50,8 @@ public class Enemy : MonoBehaviour, IDamageable
     private void Update()
     {
         Vector3 playerPos = GameManager.Instance.Player.transform.position;
-        EnemyWeapon.gameObject.transform.LookAt(new Vector3(playerPos.x, transform.position.y, playerPos.z));
+        if (EnemyWeapon)
+            EnemyWeapon.gameObject.transform.LookAt(new Vector3(playerPos.x, EnemyWeapon.transform.position.y, playerPos.z));
     }
 
     private void FixedUpdate()
@@ -62,7 +63,8 @@ public class Enemy : MonoBehaviour, IDamageable
         if (navMeshAgent.velocity.magnitude >= 0.1)
             spriteRenderer.flipX = Vector3.Dot(Vector3.right, navMeshAgent.velocity.normalized) < 0;
 
-        EnemyWeapon.Shoot();
+        if (EnemyWeapon)
+            EnemyWeapon.Shoot();
     }
 
     private void LateUpdate()
