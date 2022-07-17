@@ -50,10 +50,40 @@ MonoBehaviour:
   SpawnRules:
   - EnemyTypes:
     - {fileID: 6161051627772587815, guid: a18a3ac4f2b354743b308a6cf77de726, type: 3}
+    - {fileID: 6161051627772587815, guid: 39f272c6cb9695d4785968ecc2689f33, type: 3}
+    - {fileID: 6161051627772587815, guid: b0ab71ac2e59e5f4799a78966e5163d3, type: 3}
+    - {fileID: 6161051627772587815, guid: 4e48ee41a7cc2b0458e57a38f66884e1, type: 3}
+    - {fileID: 6161051627772587815, guid: 59bc30d09583df5408d93336852b5b3d, type: 3}
+    - {fileID: 6161051627772587815, guid: 1f3c2fe875192384194cb1c4f2465c36, type: 3}
+    - {fileID: 6161051627772587815, guid: 96acd43cbfcfce1439f5fce68899b265, type: 3}
+    - {fileID: 6161051627772587815, guid: 296c1b0362e346842a78068381ff9062, type: 3}
+    - {fileID: 6161051627772587815, guid: 6844d2c89e9b6964798ab4f093962087, type: 3}
+    - {fileID: 6161051627772587815, guid: bf7d8df89a5b54b40b623ddf6f526cfa, type: 3}
+    - {fileID: 6161051627772587815, guid: e9efe06e6410a654fa6bb22e95d208c8, type: 3}
+    - {fileID: 6161051627772587815, guid: 7ad8d283831d1e34888fc7bcc4818265, type: 3}
+    - {fileID: 6161051627772587815, guid: b209315fa853ebf4382e94f5b9e35fbe, type: 3}
+    - {fileID: 6161051627772587815, guid: c765510cf1aeb5e49a79909daceee90e, type: 3}
+    - {fileID: 6161051627772587815, guid: c7b70a28fb7d7244691a712a7fd569b7, type: 3}
+    - {fileID: 6161051627772587815, guid: a18a3ac4f2b354743b308a6cf77de726, type: 3}
     MaxEnemies: 5
-    SpawnInterval: 2
+    SpawnInterval: 3
   - EnemyTypes:
     - {fileID: 6161051627772587815, guid: a18a3ac4f2b354743b308a6cf77de726, type: 3}
     - {fileID: 598723496938744827, guid: 75c6182c495be3c4e8f77a9b32756f05, type: 3}
+    - {fileID: 6161051627772587815, guid: 39f272c6cb9695d4785968ecc2689f33, type: 3}
+    - {fileID: 6161051627772587815, guid: b0ab71ac2e59e5f4799a78966e5163d3, type: 3}
+    - {fileID: 6161051627772587815, guid: 4e48ee41a7cc2b0458e57a38f66884e1, type: 3}
+    - {fileID: 6161051627772587815, guid: 59bc30d09583df5408d93336852b5b3d, type: 3}
+    - {fileID: 6161051627772587815, guid: 1f3c2fe875192384194cb1c4f2465c36, type: 3}
+    - {fileID: 6161051627772587815, guid: 96acd43cbfcfce1439f5fce68899b265, type: 3}
+    - {fileID: 6161051627772587815, guid: 296c1b0362e346842a78068381ff9062, type: 3}
+    - {fileID: 6161051627772587815, guid: 6844d2c89e9b6964798ab4f093962087, type: 3}
+    - {fileID: 6161051627772587815, guid: bf7d8df89a5b54b40b623ddf6f526cfa, type: 3}
+    - {fileID: 6161051627772587815, guid: e9efe06e6410a654fa6bb22e95d208c8, type: 3}
+    - {fileID: 6161051627772587815, guid: 7ad8d283831d1e34888fc7bcc4818265, type: 3}
+    - {fileID: 6161051627772587815, guid: b209315fa853ebf4382e94f5b9e35fbe, type: 3}
+    - {fileID: 6161051627772587815, guid: c765510cf1aeb5e49a79909daceee90e, type: 3}
+    - {fileID: 6161051627772587815, guid: c7b70a28fb7d7244691a712a7fd569b7, type: 3}
+    - {fileID: 6161051627772587815, guid: a18a3ac4f2b354743b308a6cf77de726, type: 3}
     MaxEnemies: 10
-    SpawnInterval: 1
+    SpawnInterval: 2.5
