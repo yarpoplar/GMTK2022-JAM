@@ -9,6 +9,8 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField]
     private GameObject GFX;
     [SerializeField]
+    private GameObject DashVFX;
+    [SerializeField]
     private GameObject Sprite;
     private SpriteRenderer spriteRenderer;
     [Space]
@@ -63,7 +65,8 @@ public class Player : MonoBehaviour, IDamageable
         isDashing = true;
         canDash = false;
         float timeLeft = 0f;
-
+        if (DashVFX != null)
+            Instantiate(DashVFX, transform.position, Quaternion.identity);
         float dirModifier = Vector3.Dot(Vector3.right, direction) >= 0 ? 1 : -1;
 
         GFX.transform.DOScale(new Vector3(.8f, .8f, .8f), dashTime / 2);
