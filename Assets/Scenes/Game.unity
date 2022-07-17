@@ -1620,7 +1620,7 @@ PrefabInstance:
       objectReference: {fileID: 1549041453}
     - target: {fileID: 1896440696541131788, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
       propertyPath: dices.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1896440696541131788, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
       propertyPath: weaponDicePrefab
