@@ -34,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnRoutine()
     {
-        int index = Mathf.FloorToInt(TimePassed/60);
+        int index = Mathf.Clamp(Mathf.FloorToInt(TimePassed/60), 0, SpawnRules.Length - 1);
         SpawnStruct currentSpawnStruct = SpawnRules[index];
         if (DoSpawn)
             SpawnEnemy(currentSpawnStruct.EnemyTypes[Random.Range(0, currentSpawnStruct.EnemyTypes.Length)]);
