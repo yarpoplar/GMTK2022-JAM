@@ -31,6 +31,8 @@ public class RollDice : MonoBehaviour
             bRollFinished = true;
             GetRollResult();
         }
+
+        rbody.AddForce(new Vector3(0, -1, 0) * 10 * rbody.mass, ForceMode.Force);
     }
 
     public void GetRollResult()

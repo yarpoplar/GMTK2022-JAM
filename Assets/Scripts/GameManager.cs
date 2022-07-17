@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     private int currentWeapon = 0;
     private float diceTime = 15f;
 
+    [SerializeField]
+    private TaskBase CurrentTask;
+
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
@@ -72,5 +75,15 @@ public class GameManager : MonoBehaviour
     public void UpdateWeaponUI(int ammo)
 	{
         ammoCounter.text = ammo.ToString();
+    }
+
+    public void TaskInit(TaskBase task)
+    {
+        Debug.Log(task.name);
+    }
+
+    public void TaskCompleted()
+    {
+
     }
 }
