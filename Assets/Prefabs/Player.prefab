@@ -148,6 +148,7 @@ MonoBehaviour:
   GFX: {fileID: 929555818001350352}
   Sprite: {fileID: 4854437278096301505}
   Health: 100
+  MaxHealth: 100
   moveSpeed: 30
   dashCooldown: 0.5
   dashTime: 0.4
@@ -267,7 +268,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.150838, y: 1}
+    m_SensorSize: {x: 2.3333333, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -689,6 +690,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 929555817227865752}
     m_Modifications:
+    - target: {fileID: 1431661264872429854, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114524094611105758, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: spread
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114524094611105758, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: fireSpeed
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114524094611105758, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: recoilVector.x
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2114524094611105758, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -726,9 +743,45 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835604334357042667, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: spread
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835604334357042667, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: baseAmmo
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835604334357042667, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: fireSpeed
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835604334357042667, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: bulletsPerShot
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835604334357042667, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 693533926119840654}
+    - target: {fileID: 3835604334357042667, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: additionalForce.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855920919390039599, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e35e2ec07bc9a7143ae66793cbbe2184, type: 3}
+    - target: {fileID: 4304537384196254507, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967429779753662992, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362062232367465680, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: baseAmmo
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5362062232367465680, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -793,6 +846,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5859486497755334873, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6085327382610795138, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -813,6 +870,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6554260433453032514, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906014722626385433, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: muzzleVFX
+      value: 
+      objectReference: {fileID: 6431574441278936313}
     - target: {fileID: 6906014722626385433, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -835,7 +900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6906014722626385447, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8331372183043221009, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
       propertyPath: spriteRenderer
@@ -857,6 +922,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9014235011778894033, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9111836283542971613, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
       propertyPath: m_Name
       value: Weapons
@@ -876,6 +945,11 @@ SpriteRenderer:
 --- !u!212 &5709397077660690548 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8297544418012814805, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
+  m_PrefabInstance: {fileID: 4331643481495942561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6431574441278936313 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7303884405240111448, guid: a393b2954c7bba2488722b2a513f3795, type: 3}
   m_PrefabInstance: {fileID: 4331643481495942561}
   m_PrefabAsset: {fileID: 0}
 --- !u!212 &7165850925796538492 stripped

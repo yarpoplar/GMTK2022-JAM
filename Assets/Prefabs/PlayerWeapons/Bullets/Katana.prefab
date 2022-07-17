@@ -150,7 +150,7 @@ MonoBehaviour:
   Knockback: 2
   Livetime: 0.1
   rb: {fileID: 2322723830297603291}
-  VFX: {fileID: 0}
+  VFX: {fileID: 4929457931491987563, guid: 4fbc1c0fca615a149bb15f675acdf593, type: 3}
   isExplosive: 1
   explosiveRadius: 1
   destroyDelay: 0
