@@ -337,6 +337,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15921a87f33302842902616c0666c649, type: 3}
+--- !u!114 &203014332 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1256150150, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+  m_PrefabInstance: {fileID: 882213241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c304686f46bf246a87da15c80c867a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &266751102
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +424,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266751102}
   m_CullTransparentMesh: 1
+--- !u!114 &313701013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 281584368, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+  m_PrefabInstance: {fileID: 882213241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894892fedd0dcf94f8b32334d9f2a34b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &333021416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +1668,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+--- !u!114 &888968483 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 242097711, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+  m_PrefabInstance: {fileID: 882213241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f3fa1c607e4e544d9d5173bbd5489b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &908795807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,7 +2032,7 @@ MonoBehaviour:
         m_MethodName: NewTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 74921795}
+          m_ObjectArgument: {fileID: 313701013}
           m_ObjectArgumentAssemblyTypeName: TaskBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2013,7 +2046,7 @@ MonoBehaviour:
         m_MethodName: NewTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 74921795}
+          m_ObjectArgument: {fileID: 888968483}
           m_ObjectArgumentAssemblyTypeName: TaskBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2027,7 +2060,7 @@ MonoBehaviour:
         m_MethodName: NewTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 74921795}
+          m_ObjectArgument: {fileID: 203014332}
           m_ObjectArgumentAssemblyTypeName: TaskBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2041,7 +2074,7 @@ MonoBehaviour:
         m_MethodName: NewTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 74921795}
+          m_ObjectArgument: {fileID: 313701013}
           m_ObjectArgumentAssemblyTypeName: TaskBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2055,7 +2088,7 @@ MonoBehaviour:
         m_MethodName: NewTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 74921795}
+          m_ObjectArgument: {fileID: 1619903138}
           m_ObjectArgumentAssemblyTypeName: TaskBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3130,6 +3163,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493857292}
   m_CullTransparentMesh: 1
+--- !u!114 &1619903138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 712549715, guid: 6dc3b347f8c56b04caf5b05c20ef9a45, type: 3}
+  m_PrefabInstance: {fileID: 882213241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8e755c99bd16545b79e99f7342f55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1632871759 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7525088129364717347, guid: bb00ed5c4d553cc42a3f0e0d8d6382b2, type: 3}
@@ -4226,87 +4270,51 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1292993854}
+        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
+        m_MethodName: ResetAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1292993854}
+        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
+        m_MethodName: ResetAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1292993854}
+        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
+        m_MethodName: ResetAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1292993854}
         m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
         m_MethodName: MakeWeaponsSlower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1292993854}
-        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: ResetAll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1292993854}
-        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: MakeCameraCloser
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1292993854}
-        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: ResetAll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1292993854}
-        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: MakePlayerSlower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1292993854}
-        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: ResetAll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1292993854}
-        m_TargetAssemblyTypeName: DebuffManager, Assembly-CSharp
-        m_MethodName: MakeCameraCloser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
