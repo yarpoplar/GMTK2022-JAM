@@ -20,7 +20,7 @@ public class TaskBase : MonoBehaviour
     }
 
 
-    protected virtual void CompleteTask()
+    public virtual void CompleteTask()
     {
         if(!TaskCompleted)
         {
