@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2000
-  Damage: 1
+  Damage: 3
   Knockback: 2
   Livetime: 0.1
   rb: {fileID: 2322723830297603291}
