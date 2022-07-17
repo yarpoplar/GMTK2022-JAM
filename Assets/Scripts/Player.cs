@@ -40,6 +40,8 @@ public class Player : MonoBehaviour, IDamageable
     private bool isDashing = false;
     private bool canDash = true;
 
+    private AudioSource sfx;
+
     public delegate void OnDashDelegate();
     public event OnDashDelegate OnDash;
 
@@ -49,6 +51,7 @@ public class Player : MonoBehaviour, IDamageable
         spriteRenderer = Sprite.GetComponent<SpriteRenderer>();
         spriteMat = spriteRenderer.material;
         animator = GetComponent<Animator>();
+        sfx = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -118,9 +121,12 @@ public class Player : MonoBehaviour, IDamageable
 
     public void ApplyDamage(float damage, Vector3 knockback)
     {
+        if (IsDead)
+            return;
         knockback.y = 0;
         StartCoroutine(HitRoutine(knockback * 2000));
         Health -= damage;
+        sfx.Play();
         if ((Health <= 0) && (!IsDead))
         {
             IsDead = true;

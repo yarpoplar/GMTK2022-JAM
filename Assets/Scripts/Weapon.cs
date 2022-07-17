@@ -38,6 +38,7 @@ public class Weapon : MonoBehaviour
 	public int baseAmmo = 5;
 	public int ammo = 5;
 
+	private AudioSource sfx;
 
     private void OnDisable()
 	{
@@ -47,6 +48,7 @@ public class Weapon : MonoBehaviour
 	private void OnEnable()
 	{
 		transform.DOScale(new Vector3 (1f, 1f, 1f), .3f);
+		sfx = GetComponent<AudioSource>();
 	}
 
 	public void SetAmmo(int ammoAmount)
@@ -99,6 +101,9 @@ public class Weapon : MonoBehaviour
 	{
         if (cooldown < fireSpeed || ammo == 0)
             return;
+
+		if (sfx)
+			sfx.Play();
 
         for (int i = 0; i < bulletsPerShot; i++)
 		{
