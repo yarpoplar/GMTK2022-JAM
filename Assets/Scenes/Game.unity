@@ -827,6 +827,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &535889590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 535889591}
+  - component: {fileID: 535889592}
+  m_Layer: 0
+  m_Name: Task_DoNOTJump
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &535889591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535889590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 882213242}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &535889592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535889590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db3c3db6f503894f91e55fbc0871ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Do not jump
+  Counter: 0
+  PostCounter: /10
+  NotJumpTime: 10
 --- !u!1 &575656520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,7 +1630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &712549714
 Transform:
   m_ObjectHideFlags: 0
@@ -2019,6 +2067,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924918704}
   m_Mesh: {fileID: -462981019419857548, guid: 7e0dc0a424913ff4bbf6f42bbdd9b744, type: 3}
+--- !u!1 &945054288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945054289}
+  - component: {fileID: 945054290}
+  m_Layer: 0
+  m_Name: Task_DoNOTRoll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &945054289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945054288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 882213242}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &945054290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945054288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4b790fcb414af4a8a0633361f7792f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Do NOT roll
+  Counter: 0
+  PostCounter: /10
+  NotRollsTime: 10
 --- !u!1 &951206724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,7 +2541,7 @@ MonoBehaviour:
         m_MethodName: NewTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 242097711}
+          m_ObjectArgument: {fileID: 712549715}
           m_ObjectArgumentAssemblyTypeName: TaskBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2459,7 +2555,7 @@ MonoBehaviour:
         m_MethodName: NewTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 242097711}
+          m_ObjectArgument: {fileID: 1256150150}
           m_ObjectArgumentAssemblyTypeName: TaskBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2473,7 +2569,7 @@ MonoBehaviour:
         m_MethodName: NewTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 242097711}
+          m_ObjectArgument: {fileID: 945054290}
           m_ObjectArgumentAssemblyTypeName: TaskBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2487,7 +2583,7 @@ MonoBehaviour:
         m_MethodName: NewTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 242097711}
+          m_ObjectArgument: {fileID: 535889592}
           m_ObjectArgumentAssemblyTypeName: TaskBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2501,7 +2597,7 @@ MonoBehaviour:
         m_MethodName: NewTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 242097711}
+          m_ObjectArgument: {fileID: 535889592}
           m_ObjectArgumentAssemblyTypeName: TaskBase, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2878,6 +2974,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232347895}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1256150149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1256150151}
+  - component: {fileID: 1256150150}
+  m_Layer: 0
+  m_Name: Task_DoRoll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1256150150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256150149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c304686f46bf246a87da15c80c867a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Do barrel roll
+  Counter: 0
+  PostCounter: /10
+  RollsAmount: 15
+--- !u!4 &1256150151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256150149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 882213242}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1291291552
 GameObject:
   m_ObjectHideFlags: 0

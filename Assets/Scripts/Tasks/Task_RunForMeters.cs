@@ -14,15 +14,21 @@ public class Task_RunForMeters : TaskBase
     {
         base.Start();
         rbody = player.gameObject.GetComponent<Rigidbody>();
-        PostCounter = " / " + RunMeters;
+        PostCounter = " / " + RunMeters + " meters";
     }
 
     private void FixedUpdate()
     {
-        if (rbody.velocity.magnitude > 0)
+        if (currentRunMeters <= RunMeters)
         {
-            currentRunMeters += rbody.velocity.magnitude * Time.deltaTime;
+            if (rbody.velocity.magnitude > 0)
+                currentRunMeters += rbody.velocity.magnitude * Time.deltaTime * 0.1f;
         }
+        else
+        {
+            CompleteTask();
+        }
+        
         Counter = currentRunMeters.ToString("F0");
     }
 }

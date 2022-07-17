@@ -38,6 +38,9 @@ public class Player : MonoBehaviour, IDamageable
     private bool isDashing = false;
     private bool canDash = true;
 
+    public delegate void OnDashDelegate();
+    public event OnDashDelegate OnDash;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -48,7 +51,6 @@ public class Player : MonoBehaviour, IDamageable
 
     void Update()
     {
-
         if (isDashing)
             return;
 
@@ -62,6 +64,8 @@ public class Player : MonoBehaviour, IDamageable
 
     private IEnumerator DashRoutine(Vector3 direction)
 	{
+        if (OnDash != null)
+            OnDash();
         isDashing = true;
         canDash = false;
         float timeLeft = 0f;

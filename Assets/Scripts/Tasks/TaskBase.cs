@@ -6,9 +6,9 @@ public class TaskBase : MonoBehaviour
 {
     [SerializeField]
     public string Name = "Task name";
-    [SerializeField]
+    [HideInInspector]
     public string Counter = "0";
-    [SerializeField]
+    [HideInInspector]
     public string PostCounter = "/10";
     private bool TaskCompleted = false;
     protected Player player;
